@@ -2,7 +2,7 @@
 # Integrantes 
 Edith Sarai Claros Sorto
 
-Berta Elizabeth Mejicano Rivas 
+Berta Elizabeth Mejicanos Rivas 
 
 Ejercicio 1
 
