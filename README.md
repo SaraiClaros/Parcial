@@ -1,6 +1,7 @@
 # Parcial
 # Integrantes 
 Edith Sarai Claros Sorto
+
 Berta Elizabeth Mejicano Rivas 
 
 Ejercicio 1
@@ -31,16 +32,18 @@ Este código implementa un sistema para gestionar las ventas y proveedores en un
 •	Justificación: Permite crear y manejar productos con información relevante para la venta y la gestión de proveedores.
 •  Clase Venta:
 •	Propósito: Gestionar el proceso de una venta, incluyendo la adición de productos, cálculo del total, y manejo del vuelto.
-•	Métodos:
+•	Métodos: Permite registrar una venta, ingresar productos, mostrar detalles de la venta, y calcular el vuelto.
+registrar_proveedor: Permite registrar un proveedor y el producto que entrega, con el precio sugerido.
+mostrar_proveedores: Muestra todos los proveedores registrados y los productos que ofrecen.
 
 Ejercicio 4
 
-¿Qué se agregó?
-Método mostrar_resumen: Este método en la clase Animal muestra un resumen básico del animal, incluyendo su nombre, especie y área.
+Agregamos los siguientes metodos:
 
+Método mostrar_resumen: Este método en la clase Animal muestra un resumen básico del animal, incluyendo su nombre, especie y área.
 Opción 3 en el menú: Esta opción permite mostrar un registro completo de todos los animales, incluyendo su resumen y cualquier tratamiento que tengan.
 
-¿Cómo funciona?
+Su funcionalidad es la siguiente:
 Opción 1: Puedes ingresar un nuevo animal y añadir tratamientos.
 Opción 2: Muestra los tratamientos de todos los animales que tienen algún tratamiento asignado.
 Opción 3: Muestra un registro completo, listando todos los animales registrados junto con sus tratamientos, si los tienen.
