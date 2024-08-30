@@ -1,5 +1,5 @@
 # Parcial
-# Integrantes 
+Integrantes 
 Edith Sarai Claros Sorto
 
 Berta Elizabeth Mejicanos Rivas 
