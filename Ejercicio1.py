@@ -38,7 +38,7 @@ class Secretaria:
         else:
             print("No hay pacientes en la sala de espera.")
 
-# Ejemplo interactivo
+
 secretaria = Secretaria()
 
 while True:
