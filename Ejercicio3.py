@@ -67,7 +67,7 @@ class Tienda:
         else:
             print("No hay proveedores registrados.")
 
-# Ejemplo interactivo
+
 tienda = Tienda()
 
 while True:
