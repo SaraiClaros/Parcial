@@ -1,39 +1,51 @@
 from datetime import datetime, timedelta
-
+# Clase para representar un libro en la biblioteca
 class Libro:
     def __init__(self, titulo):
         self.titulo = titulo
         self.fecha_prestamo = None
         self.fecha_devolucion = None
         self.fecha_limite = None
-
+# Clase para gestionar las operaciones de la biblioteca
 class Biblioteca:
     def __init__(self):
         self.libros_prestados = {}
-
+  # Método para prestar un libro a una persona
     def prestar_libro(self, libro, nombre_persona):
         if libro.titulo in self.libros_prestados:
+             # Si el libro ya está prestado, muestra un mensaje
             print(f"El libro '{libro.titulo}' ya está prestado.")
         else:
+             # Asigna la fecha actual como fecha de préstamo
             libro.fecha_prestamo = datetime.now()
-            libro.fecha_limite = libro.fecha_prestamo + timedelta(days=14)  # Ejemplo: 14 días de préstamo
+             # Calcula la fecha límite sumando 14 días al préstamo
+            libro.fecha_limite = libro.fecha_prestamo + timedelta(days=14)
+            # Almacena el libro y el nombre del prestatario en el diccionario
             self.libros_prestados[libro.titulo] = (nombre_persona, libro)
+            # Imprime un mensaje confirmando el préstamo
             print(f"Libro '{libro.titulo}' prestado a {nombre_persona}. Fecha límite de devolución: {libro.fecha_limite.strftime('%d/%m/%Y')}")
-
+            
+        # Método para devolver un libro
     def devolver_libro(self, titulo_libro):
         if titulo_libro in self.libros_prestados:
             nombre_persona, libro = self.libros_prestados[titulo_libro]
+            # Asigna la fecha actual como fecha de devolución
             libro.fecha_devolucion = datetime.now()
             if libro.fecha_devolucion > libro.fecha_limite:
+                # Calcula los días de retraso y la sanción
                 dias_retraso = (libro.fecha_devolucion - libro.fecha_limite).days
                 sancion = dias_retraso * 0.50  # 50 centavos por cada día de retraso
+                 # Imprime un mensaje indicando el retraso y la sanción
                 print(f"Libro '{libro.titulo}' devuelto con retraso de {dias_retraso} días. Sanción: ${sancion:.2f}.")
+                  # Imprime un mensaje indicando que el libro fue devuelto
             else:
                 print(f"Libro '{libro.titulo}' devuelto a tiempo.")
+                # Elimina el libro de los registros de préstamos
             del self.libros_prestados[titulo_libro]
         else:
+            # Imprime un mensaje si el libro no se encuentra en los registros
             print(f"El libro '{titulo_libro}' no se encuentra en los registros de préstamos.")
-
+     # Método para mostrar todos los libros actualmente prestados
     def mostrar_libros_prestados(self):
         if self.libros_prestados:
             print("\n--- Libros actualmente prestados ---")
@@ -45,7 +57,7 @@ class Biblioteca:
                 print("-----------------------------")
         else:
             print("No hay libros prestados en este momento.")
-
+    # Método para imprimir un resumen de todos los préstamos realizados
     def imprimir_registros(self):
         if self.libros_prestados:
             print("\n--- Resumen de todos los préstamos realizados ---")
