@@ -62,7 +62,7 @@ class Biblioteca:
         else:
             print("No hay registros de préstamos para mostrar.")
 
-# Ejemplo interactivo
+
 biblioteca = Biblioteca()
 
 while True:
